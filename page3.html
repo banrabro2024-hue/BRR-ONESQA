@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>เมนูปุ่มในตาราง</title>
+
+<style>
+.myButton {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color: #ffec64;
+	border-radius: 6px;
+	border: 1px solid #ffaa22;
+	display: inline-block;
+	cursor: pointer;
+	color: #333333;
+	font-family: "Times New Roman";
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #ffee66;
+}
+
+.myButton:hover {
+	background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color: #ffab23;
+}
+
+.myButton:active {
+	position: relative;
+	top: 1px;
+}
+
+/* ตารางไม่มีเส้นขอบ */
+table {
+	border-collapse: collapse;
+	margin: 20px auto;
+}
+
+td {
+	border: none;
+	padding: 10px;
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<table>
+	<tr>
+		<td><a href="#" class="myButton">ตัวชี้วัดที่ ๓.๑</a></td>
+		<td><a href="#" class="myButton">ตัวชี้วัดที่ ๓.๒</a></td>
+		<td><a href="#" class="myButton">ตัวชี้วัดที่ ๓.๓</a></td>
+		<td><a href="#" class="myButton">ตัวชี้วัดที่ ๓.๔</a></td>
+		<td><a href="#" class="myButton">ตัวชี้วัดที่ ๓.๕</a></td>
+	</tr>
+</table>
+
+</body>
+</html>

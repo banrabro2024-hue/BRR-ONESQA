@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ตารางปุ่มตัวชี้วัด</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ตัดระยะขอบซ้ายของหน้า */
+body {
+    margin: 0;
+}
+
+/* ปุ่มเมนู */
+.myButton {
+	box-shadow: inset 0px 1px 0px 0px #97c4fe;
+	background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+	background-color: #3d94f6;
+	border-radius: 6px;
+	border: 1px solid #337fed;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: "Prompt", sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	padding: 8px 45px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #1570cd;
+}
+
+.myButton:hover {
+	background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+}
+
+.myButton:active {
+	position: relative;
+	top: 1px;
+}
+
+/* ตาราง */
+table {
+	width: 100%;
+	height: auto;
+	border: none;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+/* ตารางรูปหัว */
+.header-table img {
+	width: 100%;        /* กว้างเท่าตารางเมนู */
+	height: auto;       /* สูงตามสัดส่วนภาพ */
+	display: block;
+}
+
+/* ตารางเมนู */
+.menu-table {
+	margin-top: 2px;
+	margin-bottom: 15px;
+}
+
+td {
+	border: none;
+	text-align: center;
+	padding: 2px;
+}
+
+/* iframe */
+#iframeBox {
+	width: 100%;
+	height: 450px;
+	border: none;
+}
+</style>
+
+<script>
+function loadPage(page) {
+	document.getElementById("iframeBox").src = page;
+}
+</script>
+</head>
+
+<body>
+
+<!-- ตารางหัวเว็บไซต์ -->
+<table class="header-table">
+<tr>
+	<td>
+		<img src="Header Website BRR 22.png" alt="Header Website">
+	</td>
+</tr>
+</table>
+
+<!-- ตารางเมนู -->
+<table class="menu-table">
+<tr>
+	<td><a class="myButton" onclick="loadPage('page1-(1.1).html')">ตัวชี้วัดที่ ๑.๑</a></td>
+	<td><a class="myButton" onclick="loadPage('page1-(1.2).html')">ตัวชี้วัดที่ ๑.๒</a></td>
+	<td><a class="myButton" onclick="loadPage('page1-(1.3).html')">ตัวชี้วัดที่ ๑.๓</a></td>
+	<td><a class="myButton" onclick="loadPage('page1-(1.4).html')">ตัวชี้วัดที่ ๑.๔</a></td>
+	<td><a class="myButton" onclick="loadPage('page1-(1.5).html')">ตัวชี้วัดที่ ๑.๕</a></td>
+</tr>
+</table>
+
+<iframe id="iframeBox" title="แสดงเนื้อหา"></iframe>
+
+</body>
+</html>
