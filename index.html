@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>เว็บไซต์ 4 ส่วน</title>
+
+<!-- โหลดฟอนต์ Prompt จาก Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Prompt", sans-serif;
+        font-size: 16px;
+    }
+
+    /* ส่วน main เป็น iframe */
+    main {
+        flex: 1;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    iframe {
+        width: 100%;
+        height: 500px;
+        border: none;
+    }
+
+    /* ส่วน Header */
+    #header {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* โครงร่างเว็บ */
+    #container {
+        display: flex;
+    }
+
+    /* ตารางเมนู */
+    table {
+        border-collapse: collapse;
+        margin-top: 2px;
+        font-size: 14px;
+        width: auto;
+    }
+
+    td {
+        padding: 10px 15px;
+        cursor: pointer;
+        white-space: nowrap;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    /* แถวหัวข้อเมนู */
+    .menu-header {
+        background-color: #43B4E9;/* ฟ้าเข้ม */
+        color: black;
+        border: 1px solid #95D4F1;
+        cursor: default;
+        font-weight: 600;
+    }
+
+    /* แถวเมนูปกติสีฟ้าอ่อน ตัวอักษรขาว */
+    .menu-item {
+        background-color: #95D4F1;
+        color: black;
+        border: 1px solid #43B4E9;
+    }
+
+    .menu-item:hover {
+        background-color: #FFFFFF;
+    }
+
+    /* แถวเมนูสีฟ้าอ่อน ตัวอักษรดำ */
+    .menu-item.light {
+        background-color: ##4B0082; /* ฟ้าอ่อน */
+        color:black;
+    }
+
+    .menu-item.light:hover {
+        background-color: #FFFFFF; /* สีเข้มขึ้นเวลาชี้เมาส์ */
+    }
+
+    /* พื้นที่เนื้อหา */
+    #content {
+        flex-grow: 1;
+        padding: 20px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    /* footer */
+    #footer {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        font-weight: 500;
+    }
+  .footer-img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+</style>
+
+</head>
+<body>
+
+<!-- ส่วน Header -->
+<div id="header">
+    <img src="header web.png" class="header-img" alt="Header Image">
+</div>
+
+<div id="container">
+
+    <!-- เมนูด้านซ้าย -->
+    <nav>
+        <table>
+            <!-- แถว 1 -->
+            <tr><td class="menu-header">มาตรฐานการศึกษาปฐมวัย</td></tr>
+
+            <!-- แถว 2-4 -->
+            <tr><td class="menu-item" onclick="loadPage('page1.html')">มาตรฐานที่ ๑</td></tr>
+            <tr><td class="menu-item" onclick="loadPage('page2.html')">มาตรฐานที่ ๒</td></tr>
+            <tr><td class="menu-item" onclick="loadPage('page3.html')">มาตรฐานที่ ๓</td></tr>
+
+            <!-- แถว 5 -->
+            <tr><td class="menu-header">มาตรฐานการศึกษาขั้นพื้นฐาน</td></tr>
+
+            <!-- แถว 6-10 -->
+            <tr><td class="menu-item light" onclick="loadPage('page4.html')">มาตรฐานที่ ๑</td></tr>
+            <tr><td class="menu-item light" onclick="loadPage('page5.html')">มาตรฐานที่ ๒</td></tr>
+            <tr><td class="menu-item light" onclick="loadPage('page6.html')">มาตรฐานที่ ๓</td></tr>
+            <tr><td class="menu-item light" onclick="loadPage('page7.html')">เมนู 7</td></tr>
+            <tr><td class="menu-item light" onclick="loadPage('page8.html')">เมนู 8</td></tr>
+            <tr><td class="menu-item light" onclick="loadPage('page7.html')">เมนู 7</td></tr>
+            <tr><td class="menu-item light" onclick="loadPage('page8.html')">เมนู 8</td></tr>
+     	    <tr><td class="menu-item light" onclick="loadPage('page7.html')">เมนู 7</td></tr>
+            <tr><td class="menu-item light" onclick="loadPage('page8.html')">เมนู 8</td></tr>
+        </table>
+    </nav>
+
+    <!-- ส่วนเนื้อหา -->
+    <main>
+        <iframe id="contentFrame" src=""></iframe>
+    </main>
+
+</div>
+
+<!-- ส่วน Footer -->
+<div id="footer">
+    <img src="foot web2.png" class="footer-img" alt="Footer Image">
+</div>
+
+<script>
+    function loadPage(file) {
+        document.getElementById('contentFrame').src = file;
+    }
+</script>
+
+</body>
+</html>
